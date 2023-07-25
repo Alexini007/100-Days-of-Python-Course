@@ -134,16 +134,80 @@
 # random_num = random.randint(0, num_of_people - 1)
 # print(f"{names[random_num]} is going to buy the meal today!")
 
+# # ---------------------------------------
+# # Map a spot X on the Tic-Tac-Toe
+#
+# row1 = ["⬜️","️⬜️","️⬜️"]
+# row2 = ["⬜️","⬜️","️⬜️"]
+# row3 = ["⬜️️","⬜️️","⬜️️"]
+# my_map = [row1, row2, row3]
+# print(f"{row1}\n{row2}\n{row3}")
+# position = str(input("Where do you want to put the treasure? "))
+# my_map[int(position[1]) - 1][int(position[0]) - 1] = "X"
+#
+# print(f"{row1}\n{row2}\n{row3}")
+
+# # ---------------------------------------
+# # Loops
+#
+# fruits = ["apple", "peach", "banana"]
+# for fruit in fruits:
+#     print(fruit)
+
+# # ---------------------------------------
+# # Input a list with loop, and then calculate average height
+#
+# student_heights = input ("Input a list of student heights ").split()
+# for n in range(0, len(student_heights)):
+#     student_heights[n] = int(student_heights[n])
+# count = 0
+# total = 0
+# for height in student_heights:
+#     total += height
+#     count += 1
+# print(round(total / count))
+
+# # ---------------------------------------
+# # Determine highest score with a loop
+#
+# student_scores = input("Input a list of student scores ").split()
+# for n in range(0, len(student_scores)):
+#     student_scores[n] = int(student_scores[n])
+# print(student_scores)
+#
+# max = student_scores[0]
+# for num in student_scores:
+#     if num > max:
+#         max = num
+#
+# print(f"The highest score in the class is: {max}")
+
+# # ---------------------------------------
+# # Calculate the sum of all the even numbers from 1 to 100
+#
+# total = 0
+# for number in range(1, 101):
+#     if number % 2 == 0:
+#         total += number
+# print(total)
+#
+# # or
+#
+# total = 0
+# for number in range(2, 101, 2):
+#     total += number
+# print(total)
+
 # ---------------------------------------
-# Map a spot X on the Tic-Tac-Toe
+# FizzBuzz
 
-row1 = ["⬜️","️⬜️","️⬜️"]
-row2 = ["⬜️","⬜️","️⬜️"]
-row3 = ["⬜️️","⬜️️","⬜️️"]
-my_map = [row1, row2, row3]
-print(f"{row1}\n{row2}\n{row3}")
-position = str(input("Where do you want to put the treasure? "))
-my_map[int(position[1]) - 1][int(position[0]) - 1] = "X"
-
-print(f"{row1}\n{row2}\n{row3}")
+for number in range(1, 101):
+    if number % 3 == 0 and number % 5 == 0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
 
