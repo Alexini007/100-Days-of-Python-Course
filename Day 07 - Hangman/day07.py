@@ -2,7 +2,6 @@ import random
 import hangman_stages
 import hangman_words
 
-
 chosen_word = random.choice(hangman_words.word_list)
 print(chosen_word)
 
