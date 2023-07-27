@@ -198,16 +198,72 @@
 #     total += number
 # print(total)
 
-# ---------------------------------------
-# FizzBuzz
+# # ---------------------------------------
+# # FizzBuzz
+#
+# for number in range(1, 101):
+#     if number % 3 == 0 and number % 5 == 0:
+#         print("FizzBuzz")
+#     elif number % 3 == 0:
+#         print("Fizz")
+#     elif number % 5 == 0:
+#         print("Buzz")
+#     else:
+#         print(number)
 
-for number in range(1, 101):
-    if number % 3 == 0 and number % 5 == 0:
-        print("FizzBuzz")
-    elif number % 3 == 0:
-        print("Fizz")
-    elif number % 5 == 0:
-        print("Buzz")
-    else:
-        print(number)
+# # ---------------------------------------
+# # Calling functions
+#
+# def greet(name, location):
+#     print(f"Hello {name}")
+#     print(f"How's the weather in {location}")
+#
+#
+# greet("Alex", "Plovdiv")
+# greet(location="Sofia", name="Gosho")
 
+# # ---------------------------------------
+# # Calculates area to be painted
+#
+# import math
+#
+# test_h = int(input("Height of wall: "))
+# test_w = int(input("Width of wall: "))
+# coverage = 5
+#
+#
+# def paint_calc(height, width, cover):
+#     num_of_cans = (height * width) / cover
+#     num_of_cans = math.ceil(num_of_cans)
+#     print(f"You'll need {num_of_cans} cans of paint.")
+#
+#
+# paint_calc(test_h, test_w, coverage)
+
+# # ---------------------------------------
+# # Checks if number is prime or not
+#
+# def prime_checker(number):
+#     if number % 2 == 0 or number % 3 == 0:
+#         print("It's not a prime number.")
+#     else:
+#         print("It's a prime number.")
+#
+# n = int(input("Check this number: "))
+# prime_checker(number = n)
+
+# or
+
+# def prime_checker(number):
+#     is_prime = True
+#     for i in range(2, number):
+#         if number % i == 0:
+#             is_prime = False
+#     if is_prime:
+#         print("It's a prime number.")
+#     else:
+#         print("It's not a prime number.")
+#
+#
+# n = int(input("Check this number: "))
+# prime_checker(number=n)
