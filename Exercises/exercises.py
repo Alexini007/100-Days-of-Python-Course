@@ -267,3 +267,101 @@
 #
 # n = int(input("Check this number: "))
 # prime_checker(number=n)
+
+# # ---------------------------------------
+# # Dictionaries
+#
+#
+#
+# print(dict["normal"])
+# print(dict["name"])
+#
+# dict["nickname"] = "num"  # add to dictionary
+# print(dict)
+# dict["normal"] = 6  # edit entry from dictionary
+# print(dict)
+#
+# for key in dict:
+#     print(key)  # will print only the keys -> normal, name and nickname
+#     print(dict[key])  # will print only values
+
+# # ---------------------------------------
+# # Students grade dictionary
+#
+#
+# student_scores = {
+#   "Harry": 81,
+#   "Ron": 78,
+#   "Hermione": 99,
+#   "Draco": 74,
+#   "Neville": 62,
+# }
+#
+# student_grades = {}
+# for key in student_scores:
+#     if student_scores[key] > 90:
+#         student_grades[key] = "Outstanding"
+#     elif student_scores[key] > 80:
+#         student_grades[key] = "Exceeds Expectations"
+#     elif student_scores[key] > 70:
+#         student_grades[key] = "Acceptable"
+#     else:
+#         student_grades[key] = "Fail"
+# print(student_grades)
+
+# # ---------------------------------------
+# # Nested dictionaries & lists
+#
+# travel_log = {
+#     "France": ["Paris", "Lille", "Dijon"],
+#     "Germany": "Berlin"
+# }
+#
+# travel_log1 = {
+#     "France": {
+#         "cities_visited": ["Paris", "Lille", "Dijon"],
+#         "total_visits": 12
+#     },
+#     "Germany": "Berlin"
+# }
+#
+# travel_log1 = [
+#     {"country": "France",
+#      "cities_visited": ["Paris", "Lille", "Dijon"],
+#      "total_visits": 12
+#      },
+#     {"country": "Germany",
+#      "cities_visited": ["Dortmund", "Hamburg"],
+#      "total_visits": 17
+#      }
+# ]
+
+# # ---------------------------------------
+# # Add to dictionary
+#
+# travel_log = [
+#     {
+#         "country": "France",
+#         "visits": 12,
+#         "cities": ["Paris", "Lille", "Dijon"]
+#     },
+#     {
+#         "country": "Germany",
+#         "visits": 5,
+#         "cities": ["Berlin", "Hamburg", "Stuttgart"]
+#     },
+# ]
+#
+#
+# def add_new_country(country, times, cities):
+#     new_country = {"country": country, "visits": times, "cities": cities}
+#     travel_log.append(new_country)
+#
+#
+# # 🚨 Do not change the code below
+# add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+# print(travel_log)
+
+dictionary = {"a": 1, "b": 2, "c": 3, 1: 4, 2: 5}
+
+print(dictionary[2])
