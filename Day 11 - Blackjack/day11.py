@@ -33,9 +33,14 @@ def game():
         user_cards.append(draw_a_card())
     for i in range(0, 2):
         pc_cards.append(draw_a_card())
+    while sum(pc_cards) != 21 and sum(pc_cards) < 15:
+        pc_cards.append(draw_a_card())
 
     should_continue = True
     while should_continue:
+        if 11 in user_cards and sum(user_cards) > 21:
+            user_cards.remove(11)
+            user_cards.append(1)
         print(f"Your cards: {user_cards}")
         print(f"Computer's first card: {pc_cards[0]}")
         if sum(user_cards) > 21 or sum(user_cards) == 21 or sum(pc_cards) == 21:
