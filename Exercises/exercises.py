@@ -427,4 +427,13 @@
 # table.align = "l"
 # print(table)
 
-
+# ---------------------------------------
+# Creating class with constructor
+# class User:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#
+# person1 = User("Goshko", 18)
+# print(f"{person1.name} is {person1.age} years old")
