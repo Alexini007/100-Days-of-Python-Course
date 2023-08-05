@@ -437,3 +437,66 @@
 #
 # person1 = User("Goshko", 18)
 # print(f"{person1.name} is {person1.age} years old")
+
+# ---------------------------------------
+# Drawing dashed line with Turtle class
+
+# from turtle import Turtle, Screen
+#
+# steve_the_turtle = Turtle()
+# steve_the_turtle.shape("turtle")
+# steve_the_turtle.color("green")
+#
+# for n in range(6):
+#     steve_the_turtle.pendown()
+#     steve_the_turtle.forward(10)
+#     steve_the_turtle.penup()
+#     steve_the_turtle.forward(10)
+#
+#
+# screen = Screen()
+# screen.exitonclick()
+
+# ---------------------------------------
+# Drawing a shapes with specific number of sides
+
+# from turtle import Turtle, Screen
+# import random
+# steve_the_turtle = Turtle()
+# steve_the_turtle.shape("turtle")
+# steve_the_turtle.color("green")
+#
+# colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "wheat", "SeaGreen" ]
+#
+# def draw_figure(num_sides):
+#     for n in range(num_sides):
+#         angle = 360 / num_sides
+#         steve_the_turtle.forward(100)
+#         steve_the_turtle.right(angle)
+#
+# for shape_side_n in range(3, 11):
+#     steve_the_turtle.color(random.choice(colours))
+#     draw_figure(shape_side_n)
+# screen = Screen()
+# screen.exitonclick()
+
+# ---------------------------------------
+# Drawing a Random Walk
+
+# steve_the_turtle.pensize(10)
+#
+# colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "wheat", "SeaGreen" ]
+# directions = [0, 90, 180, 270]
+#
+# for n in range(50):
+#     steve_the_turtle.color(random.choice(colours))
+#     steve_the_turtle.forward(30)
+#     steve_the_turtle.setheading(random.choice(directions))
+
+# ---------------------------------------
+# Drawing a Spirograph - multiple circles
+
+# for n in range(36):
+#     steve_the_turtle.circle(50)
+#     steve_the_turtle.right(10)
+
