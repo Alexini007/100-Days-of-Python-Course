@@ -500,3 +500,39 @@
 #     steve_the_turtle.circle(50)
 #     steve_the_turtle.right(10)
 
+
+# ---------------------------------------
+# Inheritance example
+
+# class Animal:
+#     def __init__(self):
+#         self.num_eyes = 2
+#
+#     def breathe(self):
+#         print("Inhale, Exhale")
+#
+# class Fish(Animal):
+#     def __init__(self):
+#         super().__init__() # inherit all attributes and methods of animal
+#
+#     def breathe(self):
+#         super().breathe()   # using breathe method from animal
+#         print("but underwater")
+#     def swim(self):
+#         print("Swimming")
+#
+# nemo = Fish()
+# nemo.swim()
+# nemo.num_eyes
+# nemo.breathe()
+
+
+# ---------------------------------------
+# Slicing
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+print(letters[2:5])   # prints c d e
+print(letters[2:])    # prints all onwards from c to the end
+print(letters[:5])    # prints all before e
+print(letters[2:5:2]) # print c e, third number is increment
+print(letters[::-1])  # REVERSING LIST
