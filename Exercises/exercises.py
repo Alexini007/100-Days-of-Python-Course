@@ -528,11 +528,17 @@
 
 
 # ---------------------------------------
-# Slicing
+# Slicing lists and tuples
 
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-print(letters[2:5])   # prints c d e
-print(letters[2:])    # prints all onwards from c to the end
-print(letters[:5])    # prints all before e
-print(letters[2:5:2]) # print c e, third number is increment
-print(letters[::-1])  # REVERSING LIST
+# letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+# print(letters[2:5])   # prints c d e
+# print(letters[2:])    # prints all onwards from c to the end
+# print(letters[:5])    # prints all before e
+# print(letters[2:5:2]) # print c e, third number is increment
+# print(letters[::-1])  # REVERSING LIST
+
+# ---------------------------------------
+# Accessing a file on the desktop with an absolute path
+# with open(r"C:/Users/asus/Desktop/data.txt") as file:
+
+
