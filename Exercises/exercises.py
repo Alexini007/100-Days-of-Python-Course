@@ -597,3 +597,37 @@
 # }
 # df = pandas.DataFrame(data_dict)
 # df.to_csv("squirrel count")
+
+
+# ---------------------------------------
+# List Comprehension
+
+# nums = [1, 2, 3]
+# new_list = [n+1 for n in nums]
+# print(new_list)
+#
+# # List that doubles the numbers in the given range
+# new_list2 = [n*2 for n in range(1,5)]
+# print(new_list2)
+#
+# # Create new list with just the short names from the first list
+# names = ["Danny", "Jill", "Dave", "Eleanor", "Steve", "Beth", "Elizabeth"]
+# new_names = [name for name in names if len(name) <= 4]
+# print(new_names)
+# new_names2 = [name.upper() for name in names if len(name) > 5]
+# print(new_names2)
+#
+# # Take only even numbers
+# numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+# result = [n for n in numbers if n % 2 == 0]
+# print(result)
+
+# Compare numbers in 2 files and print out the matching ones
+# with open("file1.txt") as data1:
+#     file1_nums = data1.readlines()
+#
+# with open("file2.txt") as data2:
+#     file2_nums = data2.readlines()
+#
+# result = [int(n) for n in file1_nums if n in file2_nums]
+# print(result)
