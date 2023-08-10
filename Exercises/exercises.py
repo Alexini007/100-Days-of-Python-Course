@@ -631,3 +631,53 @@
 #
 # result = [int(n) for n in file1_nums if n in file2_nums]
 # print(result)
+
+# ---------------------------------------
+# Dictionary Comprehension
+# import random
+# names = ["Danny", "Jill", "Dave", "Eleanor", "Steve", "Beth", "Elizabeth"]
+# students_scores = {name: random.randint(1, 100) for name in names}
+#
+# passed_students = {student: score for (student, score) in students_scores.items() if score > 60}
+# print(passed_students)
+
+# Converting a sentence to a list. Then counting the number of letters in the words
+# sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+# word_list = sentence.split(" ")
+# result = {word: len(word) for word in word_list }
+# print(result)
+#
+# # We have a dictionary with a day and temperature. Make a new dictionary with converted temperature
+# weather_c = {
+#     "Monday": 12,
+#     "Tuesday": 14,
+#     "Wednesday": 15,
+#     "Thursday": 14,
+#     "Friday": 21,
+#     "Saturday": 22,
+#     "Sunday": 24,
+# }
+#
+# weather_f ={day: (temp * 9/5) + 32 for(day, temp) in weather_c.items()}
+# print(weather_f)
+
+# ---------------------------------------
+# How to iterate over a dictionary; and a Pandas DataFrame
+
+# student_dict = {
+#     "student": ["Angela", "James", "Lilly"],
+#     "score": [56, 76, 98]
+# }
+# for (key, value) in student_dict.items():
+#     print(value)
+#
+# import pandas
+# student_data_frame = pandas.DataFrame(student_dict)
+# print(student_data_frame)
+#
+# # Loop through rows of a data frame
+# for (index, row) in student_data_frame.iterrows():
+#     #print(row.student)
+#     #print(row.score)
+#     if row.student == "Angela":
+#         print(row.score)
