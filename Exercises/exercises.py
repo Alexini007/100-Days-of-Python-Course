@@ -542,3 +542,58 @@
 # with open(r"C:/Users/asus/Desktop/data.txt") as file:
 
 
+# ---------------------------------------
+# Pandas DateFrame and Series
+
+# import pandas
+# data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+# print(data["temp"])
+
+# # Convert data frame to a dictionary
+# data_dict = data.to_dict()
+# print(data_dict)
+
+# # Converts series to a list
+
+# temp_list = data["temp"].to_list()
+
+# # Get data from a column
+
+# print(data["condition"])
+# print(data.condition)
+
+# # Get data from a row
+# print(data[data.day == "Monday"])
+# print(data[data.temp == data.temp.max()])
+#
+# monday = data[data.day == "Monday"]
+# print(int(monday.temp) * 9/5 + 32)
+
+# # Create a data frame from scratch
+
+# data_dict = {
+#     "students": ["Amy", "James", "Angela"],
+#     "scores": [76, 56, 65]
+# }
+# data = pandas.DataFrame(data_dict)
+#
+# # Send that data to a csv file
+# data.to_csv("new_data.csv")
+
+# # Get column Primary Fur Color and turn it to list
+
+# data_list = data["Primary Fur Color"].to_list()
+# print(data_list)
+
+# # Get rows where the value in column Primary Fur is Gray and then get the count of these rows
+
+# grey_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"])
+# cinnamon_squirrels_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
+# black_squirrels_count = len(data[data["Primary Fur Color"] == "Black"])
+# print(grey_squirrels_count)
+# data_dict = {
+#     "Fur Color": ["Gray", "Cinnamon", "Black"],
+#     "Count": [grey_squirrels_count, cinnamon_squirrels_count, black_squirrels_count]
+# }
+# df = pandas.DataFrame(data_dict)
+# df.to_csv("squirrel count")
