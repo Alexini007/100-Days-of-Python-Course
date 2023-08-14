@@ -811,3 +811,51 @@
 #
 #
 # all_aboard(4, 7, 3, 0, x=10, y=64)  # Output will be 4 (7, 3, 0) {'x': 10, 'y': 64}
+
+# ---------------------------------------
+# FileNot found exception; KeyError exception
+
+# try:
+#     file = open("a_file.txt")
+#     a_dict = {"key": "value"}
+#     print(a_dict)
+# except FileNotFoundError:
+#     file = open("a_file.txt", "w")
+#     file.write('Sth')
+#     print("File error")
+# except KeyError as error_message:
+#     print(f"The key {error_message} doesn't exist")
+# else:
+#     content = file.read()
+#     print(content)
+# finally:
+#     file.close()
+#     print("File closed")
+
+# ---------------------------------------
+# Create own exception
+
+# height = float(input("Height:"))
+# weight = int(input("Weight"))
+#
+# if height > 3:
+#     raise ValueError("Your height can't be over 3 meters")
+# bmi = weight / (height ** 2)
+# print(bmi)
+
+# ---------------------------------------
+# Catch IndexError - index out of bounds
+
+# fruits = ["Apple", "Pear", "Orange"]
+#
+# def make_pie(index):
+#     try:
+#         fruit = fruits[index]
+#     except IndexError:
+#         print("Fruit pie")
+#     else:
+#         print(fruit + " pie")
+#
+# make_pie(4)
+
+
