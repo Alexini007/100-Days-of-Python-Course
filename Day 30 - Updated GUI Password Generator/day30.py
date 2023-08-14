@@ -29,20 +29,56 @@ def save_an_entry():
     website = website_input.get()
     username = username_input.get()
     password = password_input.get()
-    new_dict = {}
+    new_data = {
+        website: {
+            "username": username,
+            "password": password,
+        }
+    }
 
     if len(website) == 0 or len(username) == 0 or len(password) == 0:
         messagebox.showinfo(message="Please don't leave empty fields")
 
     else:
-        with open("data.json", mode="w") as data:
-            json.dump()
+        try:
+            with open("data.json", mode="r") as data_file:
+                # Reading old data
+                data = json.load(data_file)
+        except FileNotFoundError:
+            with open("data.json", mode="w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+        else:
+            # Updating the data by adding the new data
+            data.update(new_data)
+
+            with open("data.json", mode="w") as data_file:
+                # Saving the updated data
+                json.dump(data, data_file, indent=4)
+
+        finally:
             website_input.delete(0, END)
             username_input.delete(0, END)
             password_input.delete(0, END)
 
 
+def find_password():
+    website = website_input.get()
+    try:
+        with open("data.json") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message="No Data File Found.")
+    else:
+        if website in data:
+            username = data[website]["username"]
+            password = data[website]["password"]
+            messagebox.showinfo(title=website, message=f"Email: {username}\nPassword: {password}")
+        else:
+            messagebox.showinfo(title="Error", message=f"No details for {website}")
+
+
 # ---------------------------- UI SETUP ------------------------------- #
+
 my_window = Tk()
 my_window.title("Password Manager")
 my_window.config(padx=50, pady=50)
@@ -61,9 +97,9 @@ username_label.grid(column=0, row=2, sticky="e")
 password_label = Label(text="Password:", font=("Arial", 11), padx=10)
 password_label.grid(column=0, row=3, sticky="e")
 
-website_input = Entry(width=52)
+website_input = Entry(width=33)
 website_input.focus()
-website_input.grid(column=1, row=1, columnspan=2, sticky=EW)
+website_input.grid(column=1, row=1, sticky=EW)
 
 username_input = Entry(width=52)
 username_input.grid(column=1, row=2, columnspan=2, sticky=EW)
@@ -71,7 +107,10 @@ username_input.grid(column=1, row=2, columnspan=2, sticky=EW)
 password_input = Entry(width=33)
 password_input.grid(column=1, row=3, sticky=EW)
 
-generate_button = Button(text="Generate password", command=generate_password)
+search_button = Button(text="Search", command=find_password, width=19)
+search_button.grid(column=2, row=1)
+
+generate_button = Button(text="Generate password", command=generate_password, width=19)
 generate_button.grid(column=2, row=3)
 
 add_button = Button(text="Add", width=44, command=save_an_entry)
