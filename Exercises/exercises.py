@@ -858,4 +858,52 @@
 #
 # make_pie(4)
 
+# ---------------------------------------
+# Send email with smtplib
 
+# import smtplib
+# my_email = "**"
+# password = "****"
+#
+# with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+#     connection.starttls()
+#     connection.login(user=my_email, password=password)
+#     connection.sendmail(from_addr=my_email, to_addrs="**", msg="Subject: Test\n\nlets test")
+
+
+# ---------------------------------------
+# Datetime library
+
+# import datetime as dt
+#
+# now = dt.datetime.now()
+# year = now.year
+# day_of_week = now.weekday()
+# print(year)
+#
+# date_of_birth = dt.datetime(year= 1995, month= 12, day=15, hour=4)
+# print(date_of_birth)
+
+
+# ---------------------------------------
+# Send email with text from file
+
+# import smtplib
+# import datetime as dt
+# import random
+#
+# my_email = "**"
+# password = "****"
+#
+# now = dt.datetime.now()
+# if now.weekday() == 2:
+#     with open("quotes.txt") as quote_file:
+#         all_quotes = quote_file.readlines()
+#         chosen_quote = random.choice(all_quotes)
+#
+#     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+#         connection.starttls()
+#         connection.login(user=my_email, password=password)
+#         connection.sendmail(from_addr=my_email,
+#                             to_addrs=my_email,
+#                             msg=f"Subject: Motivational Quote\n\n{chosen_quote}")
