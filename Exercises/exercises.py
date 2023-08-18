@@ -907,3 +907,22 @@
 #         connection.sendmail(from_addr=my_email,
 #                             to_addrs=my_email,
 #                             msg=f"Subject: Motivational Quote\n\n{chosen_quote}")
+
+
+# ---------------------------------------
+# Making API Calls
+
+# response = requests.get(url="http://api.open-notify.org/iss-now.json")
+# print(response)   # -> Response 200
+# response.raise_for_status()
+# # HTTP Status Codes:
+# # 1xx = informational response
+# # 2xx = everything was successful
+# # 3xx = redirection
+# # 4xx = doesn't exist or problem is within you, not authorized
+# # 5xx = server fault (down or issue)
+#
+# data = response.json()  # actual json data
+# print(data)
+# print(data["iss_position"]["latitude"])
+
