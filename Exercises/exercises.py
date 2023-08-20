@@ -926,3 +926,16 @@
 # print(data)
 # print(data["iss_position"]["latitude"])
 
+
+# ---------------------------------------
+# Specifying data type - Data Type Hint
+
+# age: int
+# name: str
+#
+#
+# def police_check(person_age: int) -> bool:  # function expecting parameter of type int and to return boolean type
+#     if person_age > 18:
+#         return "Can drive"
+
+
