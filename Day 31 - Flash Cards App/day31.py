@@ -54,11 +54,11 @@ canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
 canvas.grid(column=0, row=0, columnspan=2)
 
 no_image = PhotoImage(file="./images/wrong.png")
-no_button = Button(image=no_image, highlightthickness=0, command=next_card)
+no_button = Button(image=no_image, highlightthickness=0, command=next_card, bd=0)
 no_button.grid(column=0, row=1)
 
 yes_image = PhotoImage(file="./images/right.png")
-yes_button = Button(image=yes_image, highlightthickness=0, command=is_known)
+yes_button = Button(image=yes_image, highlightthickness=0, command=is_known, bd=0)
 yes_button.grid(column=1, row=1)
 
 next_card()
