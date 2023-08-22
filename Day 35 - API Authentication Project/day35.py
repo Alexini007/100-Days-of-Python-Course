@@ -21,7 +21,6 @@ response.raise_for_status()
 weather_data = response.json()
 weather_slice = weather_data["hourly"][:12]  # slice the data so we get only the first 12 hours
 
-
 will_rain = False
 for hour_data in weather_slice:
     if int(hour_data["weather"][0]["id"]) < 700:
