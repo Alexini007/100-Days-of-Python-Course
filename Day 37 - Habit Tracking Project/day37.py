@@ -4,7 +4,7 @@ from datetime import datetime
 
 pixela_endpoint = "https://pixe.la/v1/users"
 USERNAME = "alex25"
-TOKEN = "gtgtgtgt"
+TOKEN = "***"
 GRAPH_ID = "graph1"
 
 
