@@ -26,7 +26,7 @@ sp = spotipy.Spotify(
         client_secret=secret,
         show_dialog=True,
         cache_path="token.txt",
-        username="Alex Atanasov",
+        username="***",
     )
 )
 user_id = sp.current_user()["id"]
