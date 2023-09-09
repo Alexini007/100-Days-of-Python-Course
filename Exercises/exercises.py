@@ -993,3 +993,64 @@
 # print(article_links)
 # print(article_upvotes)
 
+# ---------------------------------------
+# Web Scraping with Selenium
+
+# from selenium import webdriver
+# from selenium.webdriver import Keys
+# from selenium.webdriver.common.by import By
+#
+# options = webdriver.ChromeOptions()
+# options.add_experimental_option("detach", True)
+#
+# driver = webdriver.Chrome(options=options)
+# driver.get("https://en.wikipedia.org/wiki/Main_Page")
+
+# article_count = driver.find_element(By.CSS_SELECTOR, value="#articlecount a")
+#
+# search = driver.find_element(By.NAME, value="search")
+# search.send_keys("Python")
+# search.send_keys(Keys.ENTER)
+#
+# print(article_count.text)
+
+# ---------------------------------------
+# Selenium write inputs and click buttons
+
+# driver.get("http://secure-retreat-92358.herokuapp.com/")
+#
+# input1 = driver.find_element(By.NAME, value="fName")
+# input1.send_keys("First")
+#
+# input2 = driver.find_element(By.NAME, value="lName")
+# input2.send_keys("Last")
+#
+# input3 = driver.find_element(By.NAME, value="email")
+# input3.send_keys("test@gmail.com")
+# submit = driver.find_element(By.CSS_SELECTOR, value="form button")
+# submit.click()
+
+# ---------------------------------------
+# Selenium scraping Amazon webpage (additional code to pass Captcha)
+
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from fake_useragent import UserAgent
+#
+# # ua = UserAgent()
+# # user_agent = ua.random
+# #
+# options = webdriver.ChromeOptions()
+# options.add_experimental_option("detach", True)
+# #
+# # options.add_argument(f'--user-agent={user_agent}')
+# #
+# driver = webdriver.Chrome(options=options)
+# #
+# driver.get("https://www.amazon.com/dp/B075CYMYK6?ref_=cm_sw_r_cp_ud_ct_FM9M699VKHTT47YD50Q6&th=1")
+# #
+# # price_dollar = driver.find_element(By.CLASS_NAME, value="a-price-whole").text
+# # price_cents = driver.find_element(By.CLASS_NAME, value="a-price-fraction").text
+#
+# #
+# # print(price_dollar, price_cents)
