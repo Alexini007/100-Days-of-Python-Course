@@ -9,7 +9,7 @@ import os
 EMAIL = os.environ.get("EMAIL")
 PASSWORD = os.environ.get("PASSWORD")
 
-#creating our driver object
+# Creating our driver object
 tinder_url = "https://tinder.com/app/recs"
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
