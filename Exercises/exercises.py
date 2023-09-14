@@ -1054,3 +1054,49 @@
 #
 # #
 # # print(price_dollar, price_cents)
+
+# ---------------------------------------
+# Command Line cheat sheet(commands)
+
+# pwd - print working directory
+# cd - change directory
+# mkdir - make directory
+# touch - create a file
+# ls - list
+# rm - remove a file
+# rm -rf folder_name - delete folders
+
+# ---------------------------------------
+# Creating Python Decorator
+# import time
+#
+#
+# def delay_decorator(function):
+#     def wrapper_function():
+#         time.sleep(2)
+#         function()
+#     return wrapper_function()
+#
+#
+# @delay_decorator
+# def say_hello():
+#     print("Hi!")
+
+
+# ---------------------------------------
+# How to import and run Flask
+
+# from flask import Flask
+# app = Flask(__name__)
+#
+# # makes sure that this hello_world function is only triggered if the user access this URL(home_page/)
+# @app.route("/")
+# def hello_world():
+#     return "<p>Hello, World!</p>"
+#
+# @app.route("/bye")
+# def bye():
+#     return "<p>Bye, Bye!</p>"
+#
+# if __name__ == "__main__":
+#     app.run()
