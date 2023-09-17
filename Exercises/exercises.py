@@ -1100,3 +1100,69 @@
 #
 # if __name__ == "__main__":
 #     app.run()
+
+
+# ---------------------------------------
+# How to take parameter of URL and use it FLASK
+
+# @app.route("/username/<name>/<int:number>")
+# def hello(name, number):
+#     return f"Hello, {name} , your ID: {number}!"
+
+# ---------------------------------------
+# Use decorator to make functions bold
+
+# def make_bold(function):
+#     def wrapper():
+#         return f"<em>{function()}</em>"
+#     return wrapper
+#
+# @app.route('/bye')
+# @make_bold
+# def bye():
+#     return 'Bye'
+
+# ---------------------------------------
+# Use decorator with args and kwargs
+
+# class User:
+#     def __init__(self, name):
+#         self.name = name
+#         self.is_logged = False
+#
+#
+# def authentication_decorator(function):
+#     def wrapper(*args, **kwargs):
+#         if args[0].is_logged == True:
+#             function(args[0])
+#     return wrapper
+#
+# @authentication_decorator
+# def create_post(name):
+#     print(f"This is {name}'s post")
+#
+# new_user = User("Gogi")
+# new_user.is_logged = True
+# create_post(new_user)
+
+# ---------------------------------------
+# Use decorator with args and kwargs
+
+# def logging_decorator(function):
+#     def wrapper(*args):
+#         print(f"You called {function.__name__}{args}")
+#         result = function(*args)
+#         print(f"It returned: {result}")
+#     return wrapper
+#
+#
+# # Use the decorator 👇
+#
+# @logging_decorator
+# def a_function(*args):
+#     product = 1
+#     for arg in args:
+#         product *= arg
+#     return product
+#
+# a_function(2, 2, 3)
