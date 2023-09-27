@@ -1166,3 +1166,58 @@
 #     return product
 #
 # a_function(2, 2, 3)
+
+# ---------------------------------------
+# Check for prime number
+
+# def check_prime(num):
+#     is_prime = True
+#     for i in range(2, num - 1):
+#         if num % i == 0:
+#             print("Not Prime")
+#             is_prime = False
+#             break
+#     if is_prime == True:
+#         print("Prime")
+
+
+# ---------------------------------------
+# Sum of number's digits
+
+# sum = 0
+# digit_1 = number // 100
+# digit_2 = (number % 100) // 10
+# digit_3 = number % 10
+# sum = digit_3 + digit_2 + digit_1
+# print(sum)
+
+# ---------------------------------------
+# Sum of number's digits
+
+
+# string = input("Str")
+# new_string = ''
+# for char in string:
+#     if 'A' <= char <= 'Z':
+#         new_string += chr(ord(char) + 32)
+#     else:
+#         new_string += char
+
+
+# ---------------------------------------
+# Format numbers
+
+# print(new_string)
+# num = 15.7345345
+# print(f"The num is {num:>20.2f}")
+# print("The num is {:<20.2f}".format(num))
+# print(f"The num is {1+2:>10}")
+# print(f"The num is {17.6767:^6.2f}")
+
+
+# name = "Alex"
+# id = "34567890"
+# print(f"My name is: {name:>20}")
+# print("My name is: {:>20}".format(name))
+# print(f"My id is: {id:>22}")
+# print("My id is: {:>22}".format(id))
