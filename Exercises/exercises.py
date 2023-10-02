@@ -435,7 +435,7 @@
 #         self.age = age
 #
 #
-# person1 = User("Goshko", 18)
+# person1 = User("Steven", 18)
 # print(f"{person1.name} is {person1.age} years old")
 
 # ---------------------------------------
@@ -868,7 +868,7 @@
 # with smtplib.SMTP("smtp.gmail.com", 587) as connection:
 #     connection.starttls()
 #     connection.login(user=my_email, password=password)
-#     connection.sendmail(from_addr=my_email, to_addrs="**", msg="Subject: Test\n\nlets test")
+#     connection.sendmail(from_addr=my_email, to_addrs="**", msg="Subject: Test\n\n lets test")
 
 
 # ---------------------------------------
@@ -1221,3 +1221,192 @@
 # print("My name is: {:>20}".format(name))
 # print(f"My id is: {id:>22}")
 # print("My id is: {:>22}".format(id))
+
+# ---------------------------------------
+# Passing function as parameter
+
+# def mult(x, y):
+#     return x*y
+#
+#
+# def magic(func, x, y):
+#     return func(x, y)
+#
+#
+# print(magic(mult, 5, 6))
+
+# ---------------------------------------
+# args & kwargs
+
+# def func_args(arg1, arg2, *args):
+#     print(arg1)
+#     print(arg2)
+#     print(*args)
+#
+#
+# func_args(1, 2, 3, 4, 5)
+# # will take 2,3,4 as a tuple and pass it to args
+#
+#
+# def func_args2(arg1, *args, arg2):
+#     print(arg1)
+#     print(arg2)
+#     print(*args)
+#
+#
+# func_args(1, 2, 3, 4, arg2=5)
+# # You can define *args first, but in this case, parameters defined after *args must be specified by keyword
+
+
+# def func2(**kwargs):
+#     for (key, value) in kwargs.items():
+#         print(key, value)
+#
+# func2(a=1, b=2, c=4)
+#
+#
+# def func3(arg1, arg2, **kwargs):
+#     print(arg1)
+#     print(arg2)
+#     print(kwargs)
+#
+# func3(1, 2, c=4)
+
+# ---------------------------------------
+# Map function
+
+# from math import sqrt
+# l_list = [2, 4, 5]
+# result = list(map(sqrt, l_list))
+# print(result)
+
+# ---------------------------------------
+# def sums(a, b):
+#     return a + b
+#
+#
+# first = [1, 2, 3, 4]
+# second = [5, 6, 7, 8]
+#
+# # sum expects two parameters, so pass two lists
+# result = list(map(sums, first, second))
+# print(result)
+
+# ---------------------------------------
+# Map string to int
+
+# words = ["231", "344", "20", "-45"]
+# words = list(map(int, words))
+# print(words)
+
+# ---------------------------------------
+# Filter function
+
+# def is_even(num):
+#     return num % 2 == 0
+#
+#
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# even_numbers = list(filter(is_even, numbers))
+# print(even_numbers)
+
+# ---------------------------------------
+# Lambda function
+
+# numbers = [1, 2, 3, 4, 5]
+# squared_numbers = list(map(lambda x: x**2, numbers))
+# print(squared_numbers)
+
+# ---------------------------------------
+# Factorial
+
+# def factorial(n):
+#     product = 1
+#     for n in range(n, 1, -1):
+#         product *= n
+#     return product
+#
+#
+# print(factorial(5))
+
+# ---------------------------------------
+# Recursion & Fibonacci
+
+# def display_range(lower, upper):
+#     if lower < upper:
+#         print(lower)
+#         display_range(lower + 1, upper)
+#
+#
+# display_range(1, 5)
+
+
+# def fibonacci(n):
+#     if n < 3:
+#         return 1
+#     else:
+#         return fibonacci(n-1) + fibonacci(n-2)
+# # Calls the previous 2 numbers
+#
+#
+# print(fibonacci(9))
+
+# ---------------------------------------
+# Palindrome
+
+
+# def is_palindrome(s):
+#     if len(s) <= 1:  # Base case - when length of word/digit is 1
+#         return True
+#     elif s[0] != s[len(s) - 1]:  # Base case - when first and last digit don't match
+#         return False
+#     else:
+#         return is_palindrome(s[1: (len(s) - 1)])  # Cuts the first and last digits because they match
+#
+#
+# if is_palindrome("ikki"):
+#     print("Yes")
+# else:
+#     print("No")
+
+# ---------------------------------------
+# Type Hint
+
+# def add_numbers(num1: int, num2: int) -> int:
+#     return num1 + num2
+#
+#
+# print(add_numbers(3, 3))
+
+# ---------------------------------------
+# Type Hint
+
+# def raise_to(exp):
+#     def raise_to_exp(x):
+#         return pow(x, exp)
+#
+#     return raise_to_exp
+#
+#
+# square = raise_to(2)
+# cube = raise_to(3)
+#
+# square(3)  # 9
+# cube(3)  # 27
+
+# ---------------------------------------
+# Normal Decorator
+
+# def to_upper(func):
+#     def wrapper(message):
+#         func(message.upper())
+#     return wrapper
+#
+#
+# @to_upper
+# def print_something(message):
+#     print(message)
+#
+#
+# print_something("hello")
+
